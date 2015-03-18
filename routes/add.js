@@ -25,9 +25,10 @@ router.post('/submit', function(req, res, next) {
 
   var title = req.body.title;
   var body = req.body.body; 
-  var url_name = generateUrlName(url_name);
+  var url_name = generateUrlName(title);
   var p = new models.Page({ "title": title, "body":body, "url_name":url_name });
 
+  console.log(p);
   p.save();
   res.redirect('/');
 

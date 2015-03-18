@@ -1,5 +1,6 @@
 var express = require('express');
 var swig = require('swig');
+require('./filters')(swig);   // keep an eye on this
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
