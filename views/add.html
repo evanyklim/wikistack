@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>ADD A PAGE</h1>
+    <p>Welcome to the add page</p>
+    <form action='/add/submit' method='post'>
+    	Title <input type="text" name="title">
+    	Body <input type="text" name="body">
+    	<input type="submit" value="Submit">
+    </form>
+{% endblock %}
